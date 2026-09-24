@@ -1,0 +1,213 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  background: #ffffff;
+  color: #202123;
+}
+
+button,
+input {
+  font: inherit;
+}
+
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+
+/* Chat */
+
+.chat {
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+
+  min-width: 0;
+
+  overflow-y: auto;
+}
+
+.header {
+  position: sticky;
+  top: 0;
+  flex-shrink: 0;
+
+  height: 80px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 24px;
+
+  font-weight: 500;
+
+  background: linear-gradient(white 60%, transparent 100%);
+}
+
+.clear-button {
+  width: auto;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+
+  border: none;
+  border-radius: 10px;
+
+  padding: 0 10px;
+
+  background: transparent;
+
+  font-size: 30px;
+  cursor: pointer;
+}
+
+.delete-text {
+  display: inline;
+  font-size: 14px;
+  font-weight: 400;
+  margin-left: 4px;
+}
+
+.clear-button:hover {
+  background: #f1f1f1;
+}
+
+
+/* Messages */
+
+.messages {
+  flex: 1;
+
+  padding: 30px 20px;
+}
+
+.welcome {
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.welcome h1 {
+  font-size: 28px;
+  font-weight: 500;
+}
+
+.message {
+  max-width: 760px;
+
+  margin: 0 auto 24px;
+
+  display: flex;
+}
+
+.message.user {
+  justify-content: flex-end;
+}
+
+.message.assistant {
+  justify-content: flex-start;
+}
+
+.message-content {
+  line-height: 1.6;
+}
+
+.message.user .message-content {
+  background: #f1f1f1;
+
+  padding: 10px 16px;
+
+  border-radius: 14px;
+
+  max-width: 70%;
+}
+
+.message.assistant .message-content {
+  background: #eef4ff;
+
+  border: 1px solid #d6e4ff;
+
+  padding: 10px 16px;
+
+  border-radius: 14px;
+
+  max-width: 90%;
+}
+
+
+/* Input */
+
+.input-area {
+  position: sticky;
+  bottom: 0;
+
+  padding: 20px;
+
+  background: linear-gradient(transparent 0%, white 30%);
+}
+
+.input-container {
+  max-width: 760px;
+
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+
+  background: #f4f4f4;
+  border: 1px solid #f4f4f4;
+
+  border-radius: 50px;
+
+  padding: 8px 10px 8px 18px;
+}
+
+.input-container:focus-within {
+  border: 1px solid #5389f5;
+}
+
+.input-container input {
+  flex: 1;
+
+  border: none;
+  outline: none;
+
+  background: transparent;
+
+  padding: 10px 0;
+}
+
+.input-container button {
+  width: 40px;
+  height: 40px;
+
+  border: none;
+  border-radius: 50%;
+
+  font-size: 30px;
+
+  background: rgb(210, 225, 245);
+  color: white;
+
+  cursor: pointer;
+}
+.input-container button:hover {
+  background: rgb(93, 148, 194);
+  color: white;
+}
